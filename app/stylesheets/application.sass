@@ -1,17 +1,12 @@
 @import blueprint.sass
 @import partials/base.sass
 
-  
-/ Reset some annoying SASS styles
 textarea
   :width auto
   :height auto
-/ End reset
 
-/ Variables
 !navigation_height = 30px
 
-/ End variables
   
 .left
   :float left
@@ -38,8 +33,6 @@ body
   background-color: #111111
   background: url(/images/logo.png) top center no-repeat
 
-.splash
-  
 .splash
   img
     display: block
@@ -103,7 +96,7 @@ body
       
       &.current
         :background-color = !theme_primary - #555
-        :border-bottom = 4px solid !theme_primary - #555
+        :border-bottom = 4px 'solid' !theme_primary - #555
         
       &:hover
         :background-color = !theme_primary - #555
