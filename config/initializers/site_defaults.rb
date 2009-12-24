@@ -1,5 +1,5 @@
 class SiteDefaults
-  NAME = "ZieCreative"
+  NAME = "ZieCreative - Jasmine Devonshire"
   HOST = "ziecreative.com"
   URL = "http://" + self::HOST
   META_SUBJECT = ""

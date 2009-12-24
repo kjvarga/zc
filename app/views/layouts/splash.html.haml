@@ -3,13 +3,10 @@
     %title
       &= title
     = render 'layouts/metadata'
-      
-    -# Stylesheet includes
-    = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'application'
-
+    = stylesheet_tag 
     
     = yield(:head)
 
-  %body
-    = yield
+  %body.bp
+    .container{ :class => (!Rails.env.production? ? 'showgrid' : '') }
+      = yield
