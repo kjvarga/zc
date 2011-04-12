@@ -1,6 +1,5 @@
 source 'http://rubygems.org'
 
-
 gem "haml"
 gem 'compass'
 gem 'will_paginate'
