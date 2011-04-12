@@ -16,4 +16,8 @@ gem 'rspec-rails', '~>1.3.2', :require => 'spec/rails'
 group :test do
   gem 'ruby-debug', '0.10.3'
   gem 'ruby-debug-base', '0.10.3'
+end 
+
+group :development do
+  gem 'mysql'
 end
