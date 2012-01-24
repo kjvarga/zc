@@ -1,4 +1,6 @@
 Ziecreative::Application.routes.draw do
+  root :to => 'Portfolio#branding'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
