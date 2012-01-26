@@ -6,6 +6,7 @@ gem 'rails', '3.2.0'
 gem 'jquery-rails'
 gem 'pg'
 gem 'paperclip-s3'
+gem 'thin'
 
 group :development, :test do
   # gem 'ruby-debug19', :require => 'ruby-debug'
