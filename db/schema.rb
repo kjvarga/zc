@@ -11,13 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120125080305) do
+ActiveRecord::Schema.define(:version => 20120127074604) do
 
   create_table "images", :force => true do |t|
     t.string   "title"
     t.text     "description"
     t.integer  "position"
-    t.string   "section"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
     t.string   "thumbnail_file_name"
@@ -28,8 +27,16 @@ ActiveRecord::Schema.define(:version => 20120125080305) do
     t.string   "large_content_type"
     t.integer  "large_file_size"
     t.datetime "large_updated_at"
+    t.integer  "section_id"
   end
 
   add_index "images", ["position"], :name => "index_images_on_position"
+
+  create_table "sections", :force => true do |t|
+    t.string   "name"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

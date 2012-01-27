@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
 
+gem 'default_value_for'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'paperclip-s3'
 gem 'pg'
 gem 'rails', '~>3.2.0'
-gem 'sass-rails'
+gem 'rspec-rails'
+gem 'sass-rails',   '~> 3.2.3'
 gem 'thin'
 
 group :development, :test do

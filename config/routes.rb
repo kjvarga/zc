@@ -1,4 +1,6 @@
 Ziecreative::Application.routes.draw do
+  resources :sections
+
   resources :images
 
   root :to => 'Portfolio#branding'

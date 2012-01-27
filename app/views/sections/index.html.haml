@@ -1,0 +1,12 @@
+%h1 Sections
+%ol.sections
+  - @sections.each do |section|
+    %li
+      %strong= section.position.to_s + '.'
+      = link_to section.name, edit_section_url(section)
+      .tools
+        = link_to 'Delete', section, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Section', new_section_path

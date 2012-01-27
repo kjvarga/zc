@@ -1,0 +1,13 @@
+// Place all the styles related to the Sections controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ol.sections {
+  list-style-type: none;
+}
+
+ol.sections .tools {
+  display: inline;
+  margin-left: 15px;
+  font-size: 0.8em;
+}
