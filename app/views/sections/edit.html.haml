@@ -1,7 +1,4 @@
-%h1 Editing section
-
+%h1 Edit Section
+%p
+  = link_to 'Delete This Section', @section, :confirm => 'Are you sure?', :method => :delete
 = render 'form'
-
-= link_to 'Show', @section
-\|
-= link_to 'Back', sections_path

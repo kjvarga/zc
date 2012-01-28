@@ -24,24 +24,34 @@ a {
     background-color: #000; } }
 
 div {
-  &.field, &.actions {
+  &.field, &.actions, &.row {
     margin-bottom: 10px; } }
+
+div.column {
+  width: 150px;
+  float: left;
+  margin-right: 5px;
+}
+
+div.column label {
+  float: right;
+}
 
 #notice {
   color: green; }
 
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table; }
+.field_with_errors label {
+  background-color: #FFBFBF;
+}
 
 #error_explanation {
   width: 450px;
-  border: 2px solid red;
+  border: 2px solid #FFBFBF;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: #FFBFBF;
+  margin-left: 30px;
   h2 {
     text-align: left;
     font-weight: bold;
@@ -49,8 +59,11 @@ div {
     font-size: 12px;
     margin: -7px;
     margin-bottom: 0px;
-    background-color: #c00;
+    background-color: #FF8080;
     color: #fff; }
+  ul {
+    padding-left: 10px;
+  }
   ul li {
     font-size: 12px;
-    list-style: square; } }
+    list-style: none; } }

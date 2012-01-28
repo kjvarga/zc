@@ -1,0 +1,44 @@
+= form_for(@image, :html => { :multipart => true }) do |f|
+  - if @image.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@image.errors.count, "error")} prohibited this image from being saved:"
+      %ul
+        - @image.errors.full_messages.each do |msg|
+          %li=msg
+  - if @image.new_record? && @image.section
+    = f.hidden_field :section_id
+  - else
+    .row
+      .column
+        = f.label :section
+      = f.collection_select(:section_id, Section.all, :id, :name_with_position, :prompt => 'Select')
+
+  .row
+    .column
+      = f.label :thumbnail, 'Thumbnail Image'
+    = f.file_field :thumbnail
+
+  .row
+    .column
+      = f.label :large, 'Large Image'
+    = f.file_field :large
+
+  .row
+    .column
+      = f.label :title
+    = f.text_field :title
+
+  .row
+    .column
+      = f.label :description
+    = f.text_area :description
+
+  .row
+    .column
+      = f.label :position
+    = f.number_field :position, :size => 3
+
+  .row
+    .column &nbsp;
+    = f.submit
+    = f.button 'Cancel', :onclick => "javascript: document.location = #{sections_url.to_json}; return false;"

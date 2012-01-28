@@ -1,12 +1,24 @@
 %h1 Sections
+= link_to 'Create a New Section', new_section_path
+
 %ol.sections
   - @sections.each do |section|
     %li
-      %strong= section.position.to_s + '.'
-      = link_to section.name, edit_section_url(section)
-      .tools
-        = link_to 'Delete', section, :confirm => 'Are you sure?', :method => :delete
+      %strong
+        = section.position.to_s + '.'
+        = link_to section.name, edit_section_url(section)
+      .images
+        %div
+          = link_to 'Add an Image', new_image_path(:section_id => section.id)
+        - section.images.each do |image|
+          .image
+            = link_to(image_tag(image.thumbnail.url), edit_image_url(image))
+        .clear
+  %li
+    %strong Unassigned Images
+    %ul.images
+      - Image.where(:section_id => nil).each do |image|
+        %li
+          = link_to(image_tag(image.thumbnail.url), edit_image_url(image))
 
-%br
 
-= link_to 'New Section', new_section_path

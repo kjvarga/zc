@@ -21,3 +21,16 @@
 #notice a { border: 1px solid #26722D; color: #26722D; }
 #error a { border: 1px solid #900; color: #900; }
 #notice a:hover, #error a:hover { color: #333; border: 1px solid #333; }
+
+.admin_links {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 20px 0 30px 10px;
+}
+
+label {
+  padding: 5px;
+  background-color: #FDFFBF;
+  vertical-align: top;
+  text-align: right;
+}

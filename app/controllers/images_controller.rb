@@ -1,4 +1,6 @@
 class ImagesController < ApplicationController
+  layout 'admin'
+
   # GET /images
   # GET /images.json
   def index
@@ -25,6 +27,8 @@ class ImagesController < ApplicationController
   # GET /images/new.json
   def new
     @image = Image.new
+    @image.section = Section.find(params[:section_id]) if params[:section_id].present?
+    @image.position ||= @image.section.images.count + 1
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,12 +44,11 @@ class ImagesController < ApplicationController
   # POST /images
   # POST /images.json
   def create
-    debugger
     @image = Image.new(params[:image])
 
     respond_to do |format|
       if @image.save
-        format.html { redirect_to @image, notice: 'Image was successfully created.' }
+        format.html { redirect_to sections_url, notice: 'Image was successfully created.' }
         format.json { render json: @image, status: :created, location: @image }
       else
         format.html { render action: "new" }

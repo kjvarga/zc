@@ -6,7 +6,29 @@ ol.sections {
   list-style-type: none;
 }
 
-ol.sections .tools {
+ol.sections strong {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+ol.sections li {
+  clear: left;
+}
+
+.images {
+  margin: 20px;
+}
+
+.images .image {
+  margin: 10px 0 0 10px;
+  float: left;
+}
+
+.clear {
+  clear: left
+}
+
+.tools {
   display: inline;
   margin-left: 15px;
   font-size: 0.8em;

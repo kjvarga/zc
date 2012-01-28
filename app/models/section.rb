@@ -5,5 +5,9 @@ class Section < ActiveRecord::Base
     Section.count + 1
   end
   validates :name, :presence => true
-  validates :position, :presence => true, :inclusion => { :in => 0..100 }
+  validates :position, :presence => true, :inclusion => { :in => 1..100 }
+
+  def name_with_position
+    "#{position}. #{name}"
+  end
 end

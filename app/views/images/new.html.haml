@@ -1,0 +1,6 @@
+%h1
+  - if @image.section
+    = "Add Image to '#{@image.section.name}'"
+  - else
+    Add a New Image
+= render 'form'
