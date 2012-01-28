@@ -19,9 +19,21 @@ ol.sections li {
   margin: 20px;
 }
 
-.images .image {
-  margin: 10px 0 0 10px;
-  float: left;
+.images {
+  
+  .image {
+    margin: 10px 0 0 10px;
+    float: left;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+a.action {
+  text-decoration: none;
 }
 
 .clear {

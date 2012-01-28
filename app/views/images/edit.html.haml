@@ -1,0 +1,4 @@
+%h1 Edit Image
+%p
+  = link_to 'Delete this image', @image, confirm: 'Are you sure?', method: :delete, :class => 'action'
+= render 'form'

@@ -11,18 +11,7 @@ class SectionsController < ApplicationController
       format.json { render json: @sections }
     end
   end
-
-  # GET /sections/1
-  # GET /sections/1.json
-  def show
-    @section = Section.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @section }
-    end
-  end
-
+  
   # GET /sections/new
   # GET /sections/new.json
   def new

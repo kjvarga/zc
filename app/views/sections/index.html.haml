@@ -1,5 +1,5 @@
 %h1 Sections
-= link_to 'Create a New Section', new_section_path
+= link_to 'Create a New Section', new_section_path, :class => 'action'
 
 %ol.sections
   - @sections.each do |section|
@@ -9,16 +9,19 @@
         = link_to section.name, edit_section_url(section)
       .images
         %div
-          = link_to 'Add an Image', new_image_path(:section_id => section.id)
+          = link_to '+ Add an Image', new_image_path(:section_id => section.id)
         - section.images.each do |image|
           .image
             = link_to(image_tag(image.thumbnail.url), edit_image_url(image))
         .clear
   %li
     %strong Unassigned Images
-    %ul.images
+    .images
+      - if Image.where(:section_id => nil).empty?
+        No unassigned images.
       - Image.where(:section_id => nil).each do |image|
-        %li
+        .image
           = link_to(image_tag(image.thumbnail.url), edit_image_url(image))
+    .clear
 
 

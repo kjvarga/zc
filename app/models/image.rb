@@ -5,10 +5,6 @@ class Image < ActiveRecord::Base
   validates :title, :presence => true
   validates :section, :presence => true
   validates :position, :presence => true, :inclusion => { :in => 1..100 }
-  validate :must_have_images
-  
-  def must_have_images
-    errors.add(:thumbnail, "image is missing") if @thumbnail.blank?
-    errors.add(:large, "image is missing") if @large.blank?
-  end
+  validates_attachment_presence :thumbnail
+  validates_attachment_presence :large
 end
