@@ -8,7 +8,8 @@ Ziecreative::Application.routes.draw do
   match '/portfolio/:section', :to => 'Portfolio#section', :as => :portfolio
   match '/about', :to => 'Home#about'
   match '/contact', :to => 'Home#contact'
-  
+  match '/inspiration', :to => 'Home#inspiration'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

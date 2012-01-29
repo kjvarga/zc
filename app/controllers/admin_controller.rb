@@ -1,4 +1,6 @@
 class AdminController < ApplicationController
+  layout 'admin'
+  
   def login
     @login = Login.new(params[:login])
     if request.post? && @login.valid?
