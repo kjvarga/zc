@@ -74,4 +74,9 @@ class ImagesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def show
+    @image = Image.find(params[:id])
+    render :partial => 'hero', :locals => { :image => @image }
+  end
 end

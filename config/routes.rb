@@ -6,6 +6,8 @@ Ziecreative::Application.routes.draw do
   match '/admin/login', :to => 'Admin#login', :as => :login
   match '/admin/logout', :to => 'Admin#logout', :as => :logout
   match '/portfolio/:section', :to => 'Portfolio#section', :as => :portfolio
+  match '/about', :to => 'Home#about'
+  match '/contact', :to => 'Home#contact'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

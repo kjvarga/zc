@@ -7,5 +7,6 @@ class PortfolioController < ApplicationController
     else
       Section.first
     end
+    @image = @section.images.first || Image.new
   end
 end

@@ -34,3 +34,29 @@ label {
   vertical-align: top;
   text-align: right;
 }
+
+.menu {
+  width: 170px;
+  float: left;
+
+  ol {
+    margin: 0 0 0 30px;
+    list-style-type: none;
+    padding: 0 5px 5px 5px;
+    font-weight: bold;
+    font-size: 20px;
+    
+    li {
+      margin: 1px;
+    }
+  }
+
+  ol.sections {
+    font-weight: normal;
+  }
+  
+  a {
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}

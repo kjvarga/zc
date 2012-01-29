@@ -1,0 +1,12 @@
+- #locals: section, current_image
+.thumbnails
+  - section.images.each do |image|
+    = link_to(image_tag(image.thumbnail.url, :data => { :id => image.id }, :class => (image == current_image ? 'active' : ''), :alt => image.title))
+    
+:javascript
+  $('.thumbnails img').click(function(e) {
+    e.preventDefault();
+    $('.thumbnails img').removeClass('active');
+    $(this).addClass('active');
+    $('.holder').load('/images/' + $(this).data('id'));
+  });

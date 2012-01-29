@@ -58,3 +58,20 @@ a.action {
   margin-left: 15px;
   font-size: 0.8em;
 }
+
+.thumbnails {
+  width: 150px;
+  margin: 0px 10px 10px 10px;
+  float: left;
+  
+  img {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+  }
+  
+  img.active {
+    margin: 0;
+    border: 5px solid #00BEE1;
+  }
+}
