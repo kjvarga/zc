@@ -3,7 +3,7 @@ class PortfolioController < ApplicationController
     @section = if params[:section]
       Section.find(params[:section])
     else
-      Section.first
+      Section.first || Section.new
     end
     @image = @section.images.first || Image.new
   end
