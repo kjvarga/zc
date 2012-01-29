@@ -1,16 +1,2 @@
-!!! 5
-%html
-  %head
-    %title
-      ZieCreative
-    = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
-    = csrf_meta_tags
-  %body
-    .header
-      .logo
-        ZieCreative
-      .sparkle
-        Sparkle....
-
-    = yield
+= render :partial => 'layouts/header'
+= yield

@@ -20,15 +20,28 @@ ol.sections li {
 }
 
 .images {
-  
+
   .image {
     margin: 10px 0 0 10px;
     float: left;
   }
-  
+
   a {
     color: black;
     text-decoration: none;
+  }
+
+  a.button {
+    background-color: #00BEE1;
+    color: white;
+    padding: 5px;
+  }
+  
+  img {
+    border-bottom: 5px solid #fff;
+    &:hover {
+      border-bottom: 5px solid #00bee1;
+    }
   }
 }
 

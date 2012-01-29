@@ -9,7 +9,7 @@
         = link_to section.name, edit_section_url(section)
       .images
         %div
-          = link_to '+ Add an Image', new_image_path(:section_id => section.id)
+          = link_to '+ Add an Image', new_image_path(:section_id => section.id), :class => 'button'
         - section.images.each do |image|
           .image
             = link_to(image_tag(image.thumbnail.url), edit_image_url(image))

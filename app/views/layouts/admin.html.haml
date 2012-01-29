@@ -1,19 +1,6 @@
-!!! 5
-%html
-  %head
-    %title
-      ZieCreative
-    = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
-    = csrf_meta_tags
-  %body
-    .header
-      .logo
-        ZieCreative
-      .sparkle
-        Sparkle....
-    = link_to('Home', root_url) + '&nbsp;|&nbsp;'.html_safe
-    = link_to('Admin', admin_url)
-    = '&nbsp;|&nbsp;'.html_safe + link_to('Logout', logout_url) if authenticated?
-    = yield
+= render :partial => 'layouts/header'
+= link_to('Home', root_url) + '&nbsp;|&nbsp;'.html_safe
+= link_to('Admin', admin_url)
+= '&nbsp;|&nbsp;'.html_safe + link_to('Logout', logout_url) if authenticated?
+= yield
 

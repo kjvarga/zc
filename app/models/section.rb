@@ -1,4 +1,6 @@
 class Section < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :name, use: :history
   has_many :images, :order => 'position ASC, id ASC', :dependent => :nullify
   default_scope :order => 'position ASC, id ASC'
   default_value_for :position do

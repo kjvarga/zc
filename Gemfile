@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'default_value_for'
+gem 'friendly_id'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'paperclip-s3'
