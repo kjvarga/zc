@@ -12,7 +12,8 @@
         ZieCreative
       .sparkle
         Sparkle....
-    .admin_links
-      = link_to('Sections', sections_url) unless current_page?(sections_path)
+    = link_to('Home', root_url) + '&nbsp;|&nbsp;'.html_safe
+    = link_to('Admin', admin_url)
+    = '&nbsp;|&nbsp;'.html_safe + link_to('Logout', logout_url) if authenticated?
     = yield
 

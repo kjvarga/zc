@@ -1,14 +1,18 @@
 class AdminController < ApplicationController
-  def index
-  end
-  
   def login
-    if params[:email] != ENV['AUTH_EMAIL'] || Digest::SHA512.hexdigest(params[:password]) != ENV['AUTH_PASSWORD']
-      flash.now[:error] = 'Incorrect email or password.  Access denied.'
-      render :index
-    else
+    @login = Login.new(params[:login])
+    if request.post? && @login.valid?
+      Session.destroy_all
+      Session.create(:session_id => session[:session_id])
       flash[:notice] = 'You have logged in successfully.'
-      redirect_to images_url
+      redirect_to admin_url
+    else
+      render :login, :layout => 'application'
     end
+  end
+
+  def logout
+    Session.destroy_all
+    redirect_to root_path
   end
 end

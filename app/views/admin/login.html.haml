@@ -1,0 +1,20 @@
+%p
+  %h1 Login to the Admin Section
+  = form_for(@login, :url => login_url) do |f|
+    - if @login.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@login.errors.count, "error")} prohibited this image from being saved:"
+        %ul
+          - @login.errors.full_messages.each do |msg|
+            %li=msg
+    .row
+      .column
+        = f.label :email
+      = f.text_field(:email, :size => 20)
+    .row
+      .column
+        = f.label :password
+      = f.password_field(:password, :size => 20)
+    .row
+      .column &nbsp;
+      = f.submit('Login')

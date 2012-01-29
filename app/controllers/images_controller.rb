@@ -1,6 +1,7 @@
 class ImagesController < ApplicationController
   layout 'admin'
-
+  before_filter :require_admin
+  
   # GET /images
   # GET /images.json
   def index

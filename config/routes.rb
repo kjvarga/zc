@@ -1,14 +1,11 @@
 Ziecreative::Application.routes.draw do
   resources :sections
-
   resources :images
-
   root :to => 'Portfolio#branding'
-  # match '/admin/:action', :to => 'Admin#login', :as => :login
-  match 'login',  :via => :get,    :to => 'Admin#index', :as => :login
-  match 'login',  :via => :post,   :to => 'Admin#login'
-  match 'images', :to => 'Admin#images', :as => :images
-  
+  match '/admin', :to => 'Sections#index', :as => :admin
+  match '/admin/login', :to => 'Admin#login', :as => :login
+  match '/admin/logout', :to => 'Admin#logout', :as => :logout
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

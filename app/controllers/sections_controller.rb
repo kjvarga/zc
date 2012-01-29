@@ -1,6 +1,7 @@
 class SectionsController < ApplicationController
   layout 'admin'
-  
+  before_filter :require_admin
+    
   # GET /sections
   # GET /sections.json
   def index
