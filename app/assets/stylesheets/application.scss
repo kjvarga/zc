@@ -12,15 +12,53 @@
  *= require_tree .
 */
 
+html {
+  background-color: #EEEEEE;
+  color: black;
+  height: 100%;
+}
 
-#notice { background-color: #A4E7A0; border: 1px solid #26722D; }
-#error { background-color: #F0A8A8; border: 1px solid #900; }
-#notice, #error { width: 90%; margin: 0 auto 10px auto; padding: 5px; }
-#notice p, #error p { margin-left: 20px; padding: 0; font-size: .75em; color: #000; }
-#notice a, #error a { text-decoration: none; padding: 0 3px; }
-#notice a { border: 1px solid #26722D; color: #26722D; }
-#error a { border: 1px solid #900; color: #900; }
-#notice a:hover, #error a:hover { color: #333; border: 1px solid #333; }
+body {
+  background-color: white;
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  color: black;
+  font-family: 'rokkitt', verdana, arial, helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: 'rokkitt', verdana, arial, helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 18px; }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #000; }
+  &:hover { } }
+
+div {
+  &.field, &.actions, &.row {
+    margin-bottom: 10px; } }
+
+div.column {
+  width: 150px;
+  float: left;
+  margin-right: 5px;
+}
+
+div.column label {
+  float: right;
+}
 
 .admin_links {
   font-size: 2em;
@@ -45,7 +83,7 @@ label {
     padding: 0 5px 5px 5px;
     font-weight: bold;
     font-size: 20px;
-    
+
     li {
       margin: 1px;
     }
@@ -54,9 +92,30 @@ label {
   ol.sections {
     font-weight: normal;
   }
-  
+
   a {
     text-decoration: none;
     &:hover { text-decoration: underline; }
   }
+}
+
+.wrapper {
+  background-color: white;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -20px;
+}
+
+.push {
+  clear: both;
+  height: 20px;
+}
+
+.footer {
+  text-align: right;
+  font-family: helvetica;
+  font-size: 0.8em;
+  margin: 0 5px;
+  height: 20px;
 }

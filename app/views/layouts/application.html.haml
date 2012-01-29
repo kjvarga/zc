@@ -1,6 +1,15 @@
-= render :partial => 'layouts/header'
-= render :partial => 'layouts/menu'
-= yield
-.clear
-.footer
-  &copy ZieCreative
+!!! 5
+%html
+  = render :partial => 'layouts/header'
+  %body
+    .wrapper
+      .header
+        .logo
+          ZieCreative
+        .sparkle
+          Sparkle....
+      = render :partial => 'layouts/menu'
+      = yield
+      .push
+    .footer
+      &copy ZieCreative

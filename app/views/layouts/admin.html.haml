@@ -1,6 +1,16 @@
-= render :partial => 'layouts/header'
-= link_to('Home', root_url) + '&nbsp;|&nbsp;'.html_safe
-= link_to('Admin', admin_url)
-= '&nbsp;|&nbsp;'.html_safe + link_to('Logout', logout_url) if authenticated?
-= yield
+!!! 5
+%html
+  = render :partial => 'layouts/header'
+  %body
+    .wrapper
+      .header
+        .logo
+          ZieCreative
+        .sparkle
+          Sparkle....
+      = render :partial => 'layouts/admin_links'
+      = yield
+      .push
+    .footer
+      &copy ZieCreative
 
