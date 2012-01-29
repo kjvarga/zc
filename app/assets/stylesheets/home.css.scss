@@ -1,6 +1,7 @@
 html {
   background-color: #EEEEEE;
   color: black;
+  height: 100%;
 }
 
 body {
@@ -8,6 +9,17 @@ body {
   width: 960px;
   margin: 0 auto;
   position: relative;
+  height: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  text-align: right;
+  font-family: helvetica;
+  font-size: 0.8em;
+  margin: 0 5px 2px 0;
 }
 
 .header {
