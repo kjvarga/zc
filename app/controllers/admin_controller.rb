@@ -9,7 +9,7 @@ class AdminController < ApplicationController
       flash[:notice] = 'You have logged in successfully.'
       redirect_to admin_url
     else
-      render :login, :layout => 'application'
+      render :login
     end
   end
 
