@@ -2,8 +2,16 @@
 .thumbnails
   - section.images.each do |image|
     = link_to(image_tag(image.thumbnail.url, :data => { :id => image.id }, :class => (image == current_image ? 'active' : ''), :alt => image.title))
-    
+
 :javascript
+  $('.thumbnails img').bind('hover', { speed: 20, delay: 100 }, function(e) {
+    if ($('.thumbnails img.active').data('id') != $(this).data('id')) {
+      $('.thumbnails img').removeClass('active');
+      $(this).addClass('active');
+      $('.holder').load('/images/' + $(this).data('id'));
+    }
+  });
+
   $('.thumbnails img').click(function(e) {
     e.preventDefault();
     $('.thumbnails img').removeClass('active');

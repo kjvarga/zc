@@ -1,0 +1,1 @@
+rails g scaffold Company name:string api_key:sring basecamp_host:string active:boolean --template-engine=haml --test-framework=rspec
