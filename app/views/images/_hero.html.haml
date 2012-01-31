@@ -1,7 +1,10 @@
 -# locals: image
 .holder
   .hero
-    = image_tag image.large.url
+    .slideshow
+      .backward
+      .forward
+      = image_tag image.large.url
   .title
     = image.title
   .description

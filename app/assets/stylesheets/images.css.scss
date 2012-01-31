@@ -10,10 +10,40 @@
   
   .hero {
     margin: 0 auto;
+    height: 400px;
     
+    .slideshow {
+      height: 100%;
+      width: 100%;
+      position: relative;
+
+      .forward, .backward {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 20%;
+        z-index: 100;
+        cursor: hand;
+        cursor: pointer;
+        
+        &:hover {
+          background-color: black;
+          opacity: 0.3;
+          filter: alpha(opacity=30);
+        }
+      }
+      .forward {
+        right: 0;
+      }
+    
+      .backward {
+        left: 0;
+      }
+    }
+
     img {
       width: 400px;
-      height: 350px
+      height: 100%;
     }
   }
     
