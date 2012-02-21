@@ -1,24 +1,20 @@
-
-
 .header {
-  height:  125px;
-  border-bottom: 1px solid black;
-  margin-bottom: 20px;
+  height:  150px;
+  border-bottom: 2px solid #888888;
+  margin-bottom: 45px;
 }
 
 .logo {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 35px;
+  left: 33px;
   font-size: 70px;
 }
 
 .sparkle {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 190px;
+  top: 12px;
+  right: 18px;
 }
 
 .home {
@@ -27,10 +23,63 @@
   width: 560px;
   background-color: #eee;
   padding: 0 20px 40px 20px;
-  
+
   h1 {
     font-size: 2em;
     font-weight: bold;
   }
 }
 
+.menu {
+  width: 249px;
+  float: left;
+  font-size: 24pt;
+  line-height: 22pt;
+  padding-left: 44px;
+
+  ol {
+    list-style-type: none;
+    padding: 0 5px 5px 5px;
+    font-size: 24pt;
+    line-height: 22pt;
+
+    li {
+      margin: 1px;
+    }
+  }
+
+  ol.sections {
+    margin: 0 0 0 30px;
+    font-weight: normal;
+
+    &, a {
+      color: #555555;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+.footer {
+  text-align: right;
+  font-family: helvetica;
+  font-size: 15pt;
+  margin: 0 40px 0 0;
+  height: 20px;
+
+  .spacer {
+    font-zie: 20pt;
+  }
+  
+  &, a {
+    color: #636363;
+  }
+  
+  a {
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}

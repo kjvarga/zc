@@ -73,49 +73,15 @@ label {
   text-align: right;
 }
 
-.menu {
-  width: 170px;
-  float: left;
-
-  ol {
-    margin: 0 0 0 30px;
-    list-style-type: none;
-    padding: 0 5px 5px 5px;
-    font-weight: bold;
-    font-size: 20px;
-
-    li {
-      margin: 1px;
-    }
-  }
-
-  ol.sections {
-    font-weight: normal;
-  }
-
-  a {
-    text-decoration: none;
-    &:hover { text-decoration: underline; }
-  }
-}
-
 .wrapper {
   background-color: white;
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -20px;
+  margin: 0 auto -15px;
 }
 
 .push {
   clear: both;
-  height: 20px;
-}
-
-.footer {
-  text-align: right;
-  font-family: helvetica;
-  font-size: 0.8em;
-  margin: 0 5px;
-  height: 20px;
+  height: 15px;
 }

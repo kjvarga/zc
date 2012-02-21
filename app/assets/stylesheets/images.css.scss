@@ -3,14 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .holder {
-  margin: 5px 0 0 10px;
+  margin: 0px 0 25px 10px;
   width: 500px;
-  border: 0px solid #00BEE1;
+  border: 1px solid black;
   float: left;
 
   .hero {
     margin: 0 auto;
-    height: 400px;
 
     .slideshow {
       height: 100%;
@@ -41,19 +40,41 @@
     }
 
     img {
-      width: 400px;
-      height: 100%;
+      width: 475px;
     }
   }
 
+  .title, .description {
+    font-size: 18pt;
+    line-height: 17pt;
+  }
+
   .title {
+    color: black;
     font-size: 20px;
     font-weight: bold;
-    line-height: 24px;
-    margin: 5px 0;
+    margin: 25px 0 0 0;
+    border-top: 2px solid #888888;
   }
 
   .description {
+    color: #363636;
+  }
+}
+
+.thumbnails {
+  width: 189px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+
+  img {
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    margin: 15px;
+  }
+
+  img.active {
 
   }
 }
