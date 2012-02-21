@@ -1,18 +1,18 @@
 development:
-  adapter: postgresql
+  adapter: mysql2
   database: ziecreative_development
-  username: postgres
-  password: postgres
+  username: root
+  password:
   pool: 5
   timeout: 5000
   reconnect: true
   host: localhost
 
 test:
-  adapter: postgresql
+  adapter: mysql2
   database: ziecreative_test
-  username: postgres
-  password: postgres
+  username: root
+  password:
   pool: 5
   timeout: 5000
   reconnect: true

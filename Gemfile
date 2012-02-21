@@ -5,14 +5,18 @@ gem 'friendly_id'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'paperclip-s3'
-gem 'pg'
 gem 'rails', '~>3.2.0'
 gem 'rspec-rails'
 gem 'sass-rails',   '~> 3.2.3'
 gem 'thin'
 
+group :production do
+  gem 'pg'
+end
+
 group :development, :test do
-  # gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'mysql2'
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 group :assets do
