@@ -1,2 +1,3 @@
-= render :partial => 'sections/thumbnails', :locals => { section: @section, current_image: @image }
 = render :partial => 'images/hero', :locals => { image: @image} unless @image.new_record?
+= render :partial => 'sections/thumbnails', :locals => { section: @section, current_image: @image }
+

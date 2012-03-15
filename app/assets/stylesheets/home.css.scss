@@ -1,20 +1,20 @@
 .header {
   height:  150px;
-  border-bottom: 2px solid #888888;
-  margin-bottom: 45px;
+  border-bottom: 1px solid #888888;
+  margin-bottom: 35px;
 }
 
 .logo {
   position: absolute;
-  top: 35px;
-  left: 33px;
+  top: 28px;
+  left: 22px;
   font-size: 70px;
 }
 
 .sparkle {
   position: absolute;
   top: 12px;
-  right: 18px;
+  right: 23px;
 }
 
 .home {
@@ -31,17 +31,18 @@
 }
 
 .menu {
-  width: 249px;
+  width: 182px;
   float: left;
-  font-size: 24pt;
-  line-height: 22pt;
-  padding-left: 44px;
+  font-size: 24px;
+  line-height: 21px;
+  padding-left: 28px;
 
   ol {
     list-style-type: none;
     padding: 0 5px 5px 5px;
-    font-size: 24pt;
-    line-height: 22pt;
+    font-size: 24px;
+    line-height: 25px;
+    margin-top: 0;
 
     li {
       margin: 1px;
@@ -49,8 +50,9 @@
   }
 
   ol.sections {
-    margin: 0 0 0 30px;
+    margin: 0 0 0 25px;
     font-weight: normal;
+    padding: 0;
 
     &, a {
       color: #555555;
@@ -65,19 +67,18 @@
 
 .footer {
   text-align: right;
-  font-family: helvetica;
-  font-size: 15pt;
-  margin: 0 40px 0 0;
-  height: 20px;
+  font-size: 15px;
+  margin: 0 32px 0 0;
+  height: 25px;
 
   .spacer {
-    font-zie: 20pt;
+    font-size: 20px;
   }
-  
+
   &, a {
     color: #636363;
   }
-  
+
   a {
     text-decoration: none;
     &:hover { text-decoration: underline; }
@@ -89,7 +90,7 @@
   color: #00bee1;
   font-size: 30px;
   text-align: center;
-  
+
   img {
     display: block;
     margin: 0 auto 15px auto;

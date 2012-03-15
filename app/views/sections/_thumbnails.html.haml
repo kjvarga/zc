@@ -8,7 +8,9 @@
     if ($('.thumbnails img.active').data('id') != $(this).data('id')) {
       $('.thumbnails img').removeClass('active');
       $(this).addClass('active');
-      $('.holder').load('/images/' + $(this).data('id'));
+      $.get('/images/' + $(this).data('id'), {}, function(data) {
+        $('.holder').replaceWith(data);
+      });
     }
   });
 
@@ -17,6 +19,8 @@
     if ($('.thumbnails img.active').data('id') != $(this).data('id')) {
       $('.thumbnails img').removeClass('active');
       $(this).addClass('active');
-      $('.holder').load('/images/' + $(this).data('id'));
+      $.get('/images/' + $(this).data('id'), {}, function(data) {
+        $('.holder').replaceWith(data);
+      });
     }
   });

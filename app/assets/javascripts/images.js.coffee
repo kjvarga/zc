@@ -23,5 +23,7 @@ $(document).on('click', '.slideshow .forward, .slideshow .backward', (e) ->
   if (active.data('id') != next.data('id'))
     active.removeClass('active')
     next.addClass('active')
-    $('.holder').load(next.data('path'))
+    $.get(next.data('path'), {}, (data) ->
+      $('.holder').replaceWith(data);
+    )
 )

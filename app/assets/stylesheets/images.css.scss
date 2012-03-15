@@ -3,10 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .holder {
-  margin: 0px 0 25px 10px;
-  width: 500px;
-  border: 1px solid black;
-  float: left;
+  margin: 0px 32px 25px 0px;
+  width: 560px;
+  float: right;
 
   .hero {
     margin: 0 auto;
@@ -40,38 +39,42 @@
     }
 
     img {
-      width: 475px;
+      width: 560px;
+      border: 1px solid black;
     }
   }
 
+  .info {
+    border-top: 1px solid #888888;
+    margin: 23px 0 0 0;
+    padding-top: 10px;
+  }
+
   .title, .description {
-    font-size: 18pt;
-    line-height: 17pt;
+    font-size: 19px;
+    line-height: 19px;
   }
 
   .title {
     color: black;
-    font-size: 20px;
     font-weight: bold;
-    margin: 25px 0 0 0;
-    border-top: 2px solid #888888;
   }
 
   .description {
-    color: #363636;
+    color: #636363;
   }
 }
 
 .thumbnails {
-  width: 189px;
-  margin: 0px 10px 10px 0px;
+  width: 180px;
+  margin: 0px 0px 10px 0px;
   float: left;
 
   img {
-    width: 70px;
-    height: 70px;
-    border: 1px solid black;
-    margin: 15px;
+    width: 68px;
+    height: 68px;
+    border: 2px solid black;
+    margin: 0 15px 15px 0;
   }
 
   img.active {
