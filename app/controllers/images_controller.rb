@@ -1,6 +1,6 @@
 class ImagesController < ApplicationController
   layout 'admin'
-  before_filter :require_admin
+  before_filter :require_admin, :except => [:show]
   
   # GET /images
   # GET /images.json

@@ -1,7 +1,7 @@
 Ziecreative::Application.routes.draw do
   resources :sections
   resources :images
-  root :to => 'Home#coming_soon' #'Portfolio#section'
+  root :to => ENV['SHOW_COMING_SOON'] ? 'Home#coming_soon' : 'Portfolio#section'
   match '/admin', :to => 'Sections#index', :as => :admin
   match '/admin/login', :to => 'Admin#login', :as => :login
   match '/admin/logout', :to => 'Admin#logout', :as => :logout
