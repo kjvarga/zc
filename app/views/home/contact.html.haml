@@ -1,4 +1,20 @@
 .home
-  %h1 Contact Me
-  
-  How to reach me.  Address.
+  %h1
+    %span Contact Zie Creative
+  %p
+    Zie Creative would be happy to provide you with any information regarding freelance projects and quotes.
+
+  .contact
+    %b Tel:
+    250-858-9432
+    %br
+    %b Email:
+    = link_to 'info@ziecreative.com', 'mailto:info@ziecreative.com'
+
+  .social
+    = link_to 'http://www.facebook.com/ZieCreative/app_106171216118819' do
+      - image_tag 'facebook.jpg'
+    %br
+    = link_to 'https://twitter.com/#!/ZieCreative' do
+      - image_tag 'twitter.png'
+

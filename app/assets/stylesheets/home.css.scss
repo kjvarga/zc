@@ -19,14 +19,61 @@
 
 .home {
   float: left;
-  margin-left: 80px;
-  width: 560px;
-  background-color: #eee;
-  padding: 0 20px 40px 20px;
+  width: 634px;
+
+  &, p {
+    font-size: 19px;
+    color: #464646;
+    line-height: 21px;
+  }
 
   h1 {
-    font-size: 2em;
+    color: #000;
+    font-size: 23px;
     font-weight: bold;
+    margin-top: 1px;
+    
+    span {
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  .contact {
+    font-size: 23px;
+    line-height: 32px;
+    color: #555;
+
+    b {
+      color: #000;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #555;
+    }
+  }
+
+  .social {
+    padding-top: 41px;
+
+    img {
+      margin-bottom: 20px;
+    }
+  }
+
+  .inspiration {
+    font-size: 19px;
+    line-height: 22px;
+    color: #000;
+    
+    a {
+      color: #313131;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #189ebc;
+    }
   }
 }
 
