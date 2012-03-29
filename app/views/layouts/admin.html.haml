@@ -5,12 +5,11 @@
     .wrapper
       .header
         .logo
-          ZieCreative
+          = image_tag 'logo.png', :alt => 'ZieCreative'
         .sparkle
-          Sparkle....
+          = image_tag 'sparkle.png', :alt => ''
       = render :partial => 'layouts/admin_links'
       = yield
       .push
-    .footer
-      &copy ZieCreative
+    = render :partial => 'layouts/footer'
 

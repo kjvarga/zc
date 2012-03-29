@@ -1,7 +1,7 @@
 .menu
   %ol
     %li
-      Portfolio
+      = link_to 'Portfolio', portfolio_url
       %ol.sections
         - Section.all.each do |section|
           %li= link_to(section.name, portfolio_url(:section => section))
