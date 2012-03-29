@@ -74,10 +74,11 @@
     width: 68px;
     height: 68px;
     border: 1px solid black;
-    margin: 0 15px 15px 0;
+    margin: 1px 16px 16px 1px;
   }
 
   img.active {
     border: 2px solid black;
+    margin: 0 15px 15px 0;
   }
 }
